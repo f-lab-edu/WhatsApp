@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Kingfisher
 
 enum ItemType{
     case date
@@ -60,24 +61,25 @@ struct MessageDetailScreen: View{
         .navigationBarTitleDisplayMode(.inline)
         .toolbar{
             ToolbarItem(placement: .topBarTrailing) {
-                AsyncImage(url: channel.senderProfileURL) { image in
-                    image.resizable()
-                        .clipShape(Circle())
-                        .overlay(alignment: .bottomTrailing) {
-                            if channel.isActiveUser {
-                                Circle()
-                                    .fill(Color.green)
-                                    .frame(width: Metrics.activeCircleSize, height: Metrics.activeCircleSize)
-                                    .overlay{
-                                        Circle()
-                                            .stroke(Color.white, lineWidth: 2)
-                                            .frame(width: Metrics.activeCircleSize, height: Metrics.activeCircleSize)
-                                    }
-                            }
+                KFImage.url(channel.senderProfileURL)
+                    .placeholder{
+                        Circle().fill(Color.key)
+                    }
+                    .resizable()
+                    .clipShape(Circle())
+                    .overlay(alignment: .bottomTrailing) {
+                        if channel.isActiveUser {
+                            Circle()
+                                .fill(Color.green)
+                                .frame(width: Metrics.activeCircleSize, height: Metrics.activeCircleSize)
+                                .overlay{
+                                    Circle()
+                                        .stroke(Color.white100, lineWidth: 2)
+                                        .frame(width: Metrics.activeCircleSize, height: Metrics.activeCircleSize)
+                                }
                         }
-                } placeholder: {
-                    Circle().fill(Color.key)
-                }.frame(width: Metrics.profileSize, height: Metrics.profileSize)
+                    }
+                    .frame(width: Metrics.profileSize, height: Metrics.profileSize)
             }
         }
         .toolbar(.hidden, for: .tabBar)
@@ -145,7 +147,8 @@ private extension InputAccessoryView{
         MessageDetailScreen(channel: Channel(
             id: "dng9iumsbfnk9d6wuhb5m4hoga",
             isActiveUser: true,
-            senderProfileURL: URL(string: "http://118.67.134.127:8065/api/v4/users/bmxkuy8r1bri5xwx64xhs1o8tw/image"),
+            senderId: "bmxkuy8r1bri5xwx64xhs1o8tw",
+            senderProfileURL: URL(string: "ServerEnvironment.baseHttpURL.absoluteString/api/v4/users/bmxkuy8r1bri5xwx64xhs1o8tw/image"),
             senderName: "alice2863",
             lastMessage: "alice2863 joined the channel.",
             lastMessageSentAt: Date(iso8601: "2024-02-11'T'06:05:58'Z'0000") ?? Date(),
