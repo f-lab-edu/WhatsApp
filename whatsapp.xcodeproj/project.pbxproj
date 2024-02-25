@@ -25,7 +25,7 @@
 		584BBE432B52E04C00649628 /* StringStyleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584BBE422B52E04C00649628 /* StringStyleable.swift */; };
 		584BBE452B52E0E400649628 /* Text+StringStyleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584BBE442B52E0E400649628 /* Text+StringStyleable.swift */; };
 		584BBE482B52E6CF00649628 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584BBE472B52E6CF00649628 /* MainScreen.swift */; };
-		584BBE4C2B5308CE00649628 /* MessageDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584BBE4B2B5308CE00649628 /* MessageDetailScreen.swift */; };
+		584BBE4C2B5308CE00649628 /* ChannelDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584BBE4B2B5308CE00649628 /* ChannelDetailScreen.swift */; };
 		584BBE522B531CA000649628 /* SizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584BBE512B531CA000649628 /* SizableView.swift */; };
 		584BBE552B53209A00649628 /* MessageFromUserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584BBE542B53209A00649628 /* MessageFromUserItem.swift */; };
 		584BBE592B5320CB00649628 /* MessageDateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584BBE582B5320CB00649628 /* MessageDateItem.swift */; };
@@ -41,11 +41,19 @@
 		587052352B503C2200E08A89 /* whatsappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587052342B503C2200E08A89 /* whatsappTests.swift */; };
 		5870523F2B503C2200E08A89 /* whatsappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5870523E2B503C2200E08A89 /* whatsappUITests.swift */; };
 		587052412B503C2200E08A89 /* whatsappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587052402B503C2200E08A89 /* whatsappUITestsLaunchTests.swift */; };
-		587052512B50409900E08A89 /* MessageListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587052502B50409900E08A89 /* MessageListItem.swift */; };
+		587052512B50409900E08A89 /* ChannelListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587052502B50409900E08A89 /* ChannelListItem.swift */; };
+		5885C4CF2B8B22B100FA4806 /* ChannelDetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885C4CE2B8B22B100FA4806 /* ChannelDetailReducer.swift */; };
+		5885C4D12B8B245300FA4806 /* ChannelDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885C4D02B8B245300FA4806 /* ChannelDetailService.swift */; };
+		5885C4D42B8B24A000FA4806 /* PostInChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885C4D32B8B24A000FA4806 /* PostInChannel.swift */; };
+		5885C4D62B8B27A800FA4806 /* ChannelDetailService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885C4D52B8B27A800FA4806 /* ChannelDetailService+Mock.swift */; };
+		5885C4D82B8B299F00FA4806 /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885C4D72B8B299F00FA4806 /* HomeReducer.swift */; };
+		5885C4DA2B8B4E6100FA4806 /* ChannelDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885C4D92B8B4E6100FA4806 /* ChannelDetailItem.swift */; };
 		58A023B62B789C4F0080EBCD /* ServiceDependency+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A023B52B789C4F0080EBCD /* ServiceDependency+Mock.swift */; };
 		58A023B82B789C800080EBCD /* ChannelListService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A023B72B789C800080EBCD /* ChannelListService+Mock.swift */; };
 		58A023BA2B789FAD0080EBCD /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A023B92B789FAD0080EBCD /* Date+Extension.swift */; };
+		58A023BC2B78BA570080EBCD /* WANetworkAPI in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 583F0AA42B5D2A8600F83B32 /* WANetworkAPI */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		58B0341B2B701B980012CA0D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 58B0341A2B701B980012CA0D /* Kingfisher */; };
+		58E0170F2B820688005AD74A /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 58E0170E2B820688005AD74A /* Algorithms */; };
 		58E434EA2B6E9E8D0099D490 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E434E92B6E9E8D0099D490 /* LoginScreen.swift */; };
 		58E434ED2B6EA3A30099D490 /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E434EC2B6EA3A30099D490 /* LoginReducer.swift */; };
 		58E434F22B6F2DD10099D490 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E434F12B6F2DD10099D490 /* LoginService.swift */; };
@@ -74,6 +82,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		58A023BD2B78BA570080EBCD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				58A023BC2B78BA570080EBCD /* WANetworkAPI in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		583437B72B53AA840081B092 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		583F0AA72B5D2D3500F83B32 /* StoreEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreEnvironment.swift; sourceTree = "<group>"; };
@@ -93,7 +115,7 @@
 		584BBE422B52E04C00649628 /* StringStyleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringStyleable.swift; sourceTree = "<group>"; };
 		584BBE442B52E0E400649628 /* Text+StringStyleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+StringStyleable.swift"; sourceTree = "<group>"; };
 		584BBE472B52E6CF00649628 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
-		584BBE4B2B5308CE00649628 /* MessageDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailScreen.swift; sourceTree = "<group>"; };
+		584BBE4B2B5308CE00649628 /* ChannelDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailScreen.swift; sourceTree = "<group>"; };
 		584BBE512B531CA000649628 /* SizableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizableView.swift; sourceTree = "<group>"; };
 		584BBE542B53209A00649628 /* MessageFromUserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFromUserItem.swift; sourceTree = "<group>"; };
 		584BBE582B5320CB00649628 /* MessageDateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDateItem.swift; sourceTree = "<group>"; };
@@ -111,7 +133,13 @@
 		5870523A2B503C2200E08A89 /* whatsappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whatsappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5870523E2B503C2200E08A89 /* whatsappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whatsappUITests.swift; sourceTree = "<group>"; };
 		587052402B503C2200E08A89 /* whatsappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whatsappUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		587052502B50409900E08A89 /* MessageListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListItem.swift; sourceTree = "<group>"; };
+		587052502B50409900E08A89 /* ChannelListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListItem.swift; sourceTree = "<group>"; };
+		5885C4CE2B8B22B100FA4806 /* ChannelDetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailReducer.swift; sourceTree = "<group>"; };
+		5885C4D02B8B245300FA4806 /* ChannelDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailService.swift; sourceTree = "<group>"; };
+		5885C4D32B8B24A000FA4806 /* PostInChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInChannel.swift; sourceTree = "<group>"; };
+		5885C4D52B8B27A800FA4806 /* ChannelDetailService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChannelDetailService+Mock.swift"; sourceTree = "<group>"; };
+		5885C4D72B8B299F00FA4806 /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
+		5885C4D92B8B4E6100FA4806 /* ChannelDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailItem.swift; sourceTree = "<group>"; };
 		58A023B52B789C4F0080EBCD /* ServiceDependency+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceDependency+Mock.swift"; sourceTree = "<group>"; };
 		58A023B72B789C800080EBCD /* ChannelListService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChannelListService+Mock.swift"; sourceTree = "<group>"; };
 		58A023B92B789FAD0080EBCD /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -134,6 +162,7 @@
 				58B0341B2B701B980012CA0D /* Kingfisher in Frameworks */,
 				583F0AA52B5D2A8600F83B32 /* WANetworkAPI in Frameworks */,
 				5866D9392B5D161B00299A74 /* WANetworkAPI in Frameworks */,
+				58E0170F2B820688005AD74A /* Algorithms in Frameworks */,
 				5866D92F2B5D110D00299A74 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,16 +256,16 @@
 			isa = PBXGroup;
 			children = (
 				58E434E82B6E9E810099D490 /* LoginScreen */,
-				584BBE4A2B5308BF00649628 /* MessageDetailScreen */,
+				584BBE4A2B5308BF00649628 /* ChannelDetail */,
 				584BBE492B52E6D200649628 /* WelcomeScreen */,
 				584BBE462B52E6C600649628 /* Main */,
 				584BBE3D2B52D98E00649628 /* Home */,
-				584BBE372B52D20700649628 /* MessageList */,
+				584BBE372B52D20700649628 /* ChannelList */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		584BBE372B52D20700649628 /* MessageList */ = {
+		584BBE372B52D20700649628 /* ChannelList */ = {
 			isa = PBXGroup;
 			children = (
 				58A023B42B789B7E0080EBCD /* Model */,
@@ -245,13 +274,14 @@
 				58F1F0B32B6F6E74007A5DCC /* ChannelListService.swift */,
 				58A023B72B789C800080EBCD /* ChannelListService+Mock.swift */,
 			);
-			path = MessageList;
+			path = ChannelList;
 			sourceTree = "<group>";
 		};
 		584BBE3D2B52D98E00649628 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				584BBE3E2B52D99700649628 /* HomeScreen.swift */,
+				5885C4D72B8B299F00FA4806 /* HomeReducer.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -273,12 +303,16 @@
 			path = WelcomeScreen;
 			sourceTree = "<group>";
 		};
-		584BBE4A2B5308BF00649628 /* MessageDetailScreen */ = {
+		584BBE4A2B5308BF00649628 /* ChannelDetail */ = {
 			isa = PBXGroup;
 			children = (
-				584BBE4B2B5308CE00649628 /* MessageDetailScreen.swift */,
+				5885C4D22B8B249400FA4806 /* Model */,
+				584BBE4B2B5308CE00649628 /* ChannelDetailScreen.swift */,
+				5885C4CE2B8B22B100FA4806 /* ChannelDetailReducer.swift */,
+				5885C4D02B8B245300FA4806 /* ChannelDetailService.swift */,
+				5885C4D52B8B27A800FA4806 /* ChannelDetailService+Mock.swift */,
 			);
-			path = MessageDetailScreen;
+			path = ChannelDetail;
 			sourceTree = "<group>";
 		};
 		584BBE502B531C9500649628 /* SizableView */ = {
@@ -393,18 +427,27 @@
 				584BBE562B5320B200649628 /* MessageFromOtherItem */,
 				584BBE532B53208200649628 /* MessageFromUserItem */,
 				584BBE502B531C9500649628 /* SizableView */,
-				5870524F2B50408100E08A89 /* MessageListItem */,
+				5870524F2B50408100E08A89 /* ChannelListItem */,
 			);
 			path = Component;
 			sourceTree = "<group>";
 		};
-		5870524F2B50408100E08A89 /* MessageListItem */ = {
+		5870524F2B50408100E08A89 /* ChannelListItem */ = {
 			isa = PBXGroup;
 			children = (
-				587052502B50409900E08A89 /* MessageListItem.swift */,
+				587052502B50409900E08A89 /* ChannelListItem.swift */,
 				584BBE322B52D19000649628 /* UnreadMessageBubble.swift */,
 			);
-			path = MessageListItem;
+			path = ChannelListItem;
+			sourceTree = "<group>";
+		};
+		5885C4D22B8B249400FA4806 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5885C4D32B8B24A000FA4806 /* PostInChannel.swift */,
+				5885C4D92B8B4E6100FA4806 /* ChannelDetailItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		58A023B42B789B7E0080EBCD /* Model */ = {
@@ -444,6 +487,7 @@
 				587052172B503C1D00E08A89 /* Sources */,
 				587052182B503C1D00E08A89 /* Frameworks */,
 				587052192B503C1D00E08A89 /* Resources */,
+				58A023BD2B78BA570080EBCD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -454,6 +498,7 @@
 				5866D92E2B5D110D00299A74 /* ComposableArchitecture */,
 				583F0AA42B5D2A8600F83B32 /* WANetworkAPI */,
 				58B0341A2B701B980012CA0D /* Kingfisher */,
+				58E0170E2B820688005AD74A /* Algorithms */,
 			);
 			productName = whatsapp;
 			productReference = 5870521B2B503C1D00E08A89 /* whatsapp.app */;
@@ -531,6 +576,7 @@
 				5866D92D2B5D110D00299A74 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				583F0AA32B5D2A8600F83B32 /* XCLocalSwiftPackageReference "Project/WANetworkAPI" */,
 				58B034192B701B980012CA0D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				58E0170D2B820688005AD74A /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 			);
 			productRefGroup = 5870521C2B503C1D00E08A89 /* Products */;
 			projectDirPath = "";
@@ -583,8 +629,9 @@
 				584BBE482B52E6CF00649628 /* MainScreen.swift in Sources */,
 				58E435012B6F3DA60099D490 /* Channel.swift in Sources */,
 				584BBE262B52C07700649628 /* Font+NanumGothic.swift in Sources */,
+				5885C4D12B8B245300FA4806 /* ChannelDetailService.swift in Sources */,
 				587052282B503C2100E08A89 /* Persistence.swift in Sources */,
-				584BBE4C2B5308CE00649628 /* MessageDetailScreen.swift in Sources */,
+				584BBE4C2B5308CE00649628 /* ChannelDetailScreen.swift in Sources */,
 				583F0AA82B5D2D3500F83B32 /* StoreEnvironment.swift in Sources */,
 				5870522B2B503C2100E08A89 /* whatsapp.xcdatamodeld in Sources */,
 				584BBE3C2B52D43900649628 /* EdgeInsets.swift in Sources */,
@@ -603,16 +650,21 @@
 				58E434F72B6F2F950099D490 /* ServiceDependency.swift in Sources */,
 				58E434F22B6F2DD10099D490 /* LoginService.swift in Sources */,
 				58E434F92B6F30690099D490 /* MainReducer.swift in Sources */,
+				5885C4D62B8B27A800FA4806 /* ChannelDetailService+Mock.swift in Sources */,
 				58A023BA2B789FAD0080EBCD /* Date+Extension.swift in Sources */,
 				584BBE452B52E0E400649628 /* Text+StringStyleable.swift in Sources */,
+				5885C4D82B8B299F00FA4806 /* HomeReducer.swift in Sources */,
 				584BBE3F2B52D99700649628 /* HomeScreen.swift in Sources */,
 				584BBE5B2B5320DA00649628 /* MessageFromOtherItem.swift in Sources */,
 				58A023B62B789C4F0080EBCD /* ServiceDependency+Mock.swift in Sources */,
 				5870521F2B503C1D00E08A89 /* whatsappApp.swift in Sources */,
 				584BBE432B52E04C00649628 /* StringStyleable.swift in Sources */,
 				584BBE592B5320CB00649628 /* MessageDateItem.swift in Sources */,
+				5885C4D42B8B24A000FA4806 /* PostInChannel.swift in Sources */,
 				583437B82B53AA840081B092 /* RoundedCorner.swift in Sources */,
-				587052512B50409900E08A89 /* MessageListItem.swift in Sources */,
+				5885C4CF2B8B22B100FA4806 /* ChannelDetailReducer.swift in Sources */,
+				5885C4DA2B8B4E6100FA4806 /* ChannelDetailItem.swift in Sources */,
+				587052512B50409900E08A89 /* ChannelListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,6 +1021,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		58E0170D2B820688005AD74A /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -985,6 +1045,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 58B034192B701B980012CA0D /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		58E0170E2B820688005AD74A /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58E0170D2B820688005AD74A /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
 		};
 /* End XCSwiftPackageProductDependency section */
 
